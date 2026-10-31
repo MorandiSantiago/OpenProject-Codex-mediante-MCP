@@ -1,0 +1,17 @@
+# Configuración y secretos locales
+config.toml
+.codex/
+.env
+.env.*
+*.log
+
+# Documentación y datos internos
+*.pdf
+*.odg
+*.zip
+*.bak
+
+# Entornos y cachés
+.venv/
+__pycache__/
+*.py[cod]

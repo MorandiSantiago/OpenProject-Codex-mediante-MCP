@@ -1,0 +1,22 @@
+# Ejemplo ilustrativo para Windows. Reemplazar rutas, URL y credenciales localmente.
+# No versionar un config.toml que contenga claves reales.
+
+[mcp_servers.openproject]
+command = "C:\\Tools\\openproject-ce-mcp.exe"
+
+[mcp_servers.openproject.env]
+OPENPROJECT_BASE_URL = "http://localhost:8080"
+OPENPROJECT_API_TOKEN = "REEMPLAZAR_CON_TOKEN_DE_PRUEBA"
+OPENPROJECT_READ_PROJECTS = "ID_PROYECTO_AUTORIZADO"
+OPENPROJECT_WRITE_PROJECTS = "ID_PROYECTO_AUTORIZADO"
+OPENPROJECT_ENABLE_VERSION_WRITE = "false"
+OPENPROJECT_ENABLE_MEETING_WRITE = "false"
+
+[mcp_servers.openproject_admin]
+command = "C:\\Tools\\OpenProject-MCP-Usuarios\\.venv\\Scripts\\openproject-mcp.exe"
+cwd = "C:\\Tools\\OpenProject-MCP-Usuarios"
+
+[mcp_servers.openproject_admin.env]
+OPENPROJECT_URL = "http://localhost:8080"
+OPENPROJECT_API_KEY = "REEMPLAZAR_CON_TOKEN_ADMIN_DE_PRUEBA"
+OPENPROJECT_MCP_INCLUDE_TAGS = "create_user,get_user,list_users"
